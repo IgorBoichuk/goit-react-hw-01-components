@@ -1,0 +1,38 @@
+.wrapper {
+  border: 1px solid black;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 450px;
+}
+
+.title {
+  text-align: center;
+  font-size: 25px;
+  color: #444343;
+  font-weight: bold;
+}
+
+.list {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: grey;
+}
+
+.item {
+  padding: 15px 5px;
+  text-align: center;
+  width: 100%;
+}
+
+.label {
+  margin: 0;
+  padding: 5px;
+}
+
+.percentage {
+  font-weight: bold;
+}
