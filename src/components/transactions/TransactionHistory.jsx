@@ -1,6 +1,16 @@
 import style from './Transactions.module.css';
 
-export const TransactionHistory = ({ id, type, amount, currency }) => {
+export const TransactionHistory = ({ id, type, amount, currency, items }) => {
+  const renderedData = items.map(item => {
+    return (
+      <tr key={item.id} className={style.transactionhistorytbodylist}>
+        <td className={style.transactionhistorytbodyitem}>{item.type}</td>
+        <td className={style.transactionhistorytbodyitem}>{item.amount}</td>
+        <td className={style.transactionhistorytbodyitem}>{item.currency}</td>
+      </tr>
+    );
+  });
+
   return (
     <table className={style.transactionhistorytable}>
       <thead className={style.transactionhistorythead}>
@@ -10,19 +20,7 @@ export const TransactionHistory = ({ id, type, amount, currency }) => {
           <th className={style.transactionhistorytitle}>Currency</th>
         </tr>
       </thead>
-
-      <tbody className={style.transactionhistorytbody}>
-        <tr className={style.transactionhistorytbodylist}>
-          <td className={style.transactionhistorytbodyitem}>Invoice</td>
-          <td className={style.transactionhistorytbodyitem}>125</td>
-          <td className={style.transactionhistorytbodyitem}>USD</td>
-        </tr>
-        <tr className={style.transactionhistorytbodylist}>
-          <td className={style.transactionhistorytbodyitem}>Withdrawal</td>
-          <td className={style.transactionhistorytbodyitem}>85</td>
-          <td className={style.transactionhistorytbodyitem}>USD</td>
-        </tr>
-      </tbody>
+      <tbody className={style.transactionhistorytbody}>{renderedData}</tbody>
     </table>
   );
 };

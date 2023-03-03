@@ -32,7 +32,6 @@ const ProfileCardFooter = styled.ul`
 const StatsItem = styled.li`
   text-align: center;
   width: 100%;
-  /* padding: 20px; */
   border-right: 1px solid grey;
 `;
 const StatsName = styled.p`
