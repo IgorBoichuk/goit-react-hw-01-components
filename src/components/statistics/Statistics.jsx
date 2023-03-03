@@ -1,4 +1,3 @@
-// import styled from 'styled-components';
 import style from './Statistics.module.css';
 
 export const Statistics = ({ id, title, stats }) => {
