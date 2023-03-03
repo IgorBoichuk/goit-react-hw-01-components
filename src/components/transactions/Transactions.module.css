@@ -1,0 +1,18 @@
+.transactionhistorytable {
+  width: 500px;
+  border: 1px solid black;
+}
+.transactionhistorythead {
+}
+.transactionhistorytheadrow {
+}
+.transactionhistorytitle {
+  border: 1px solid black;
+}
+.transactionhistorytbody {
+}
+.transactionhistorytbodylist {
+}
+.transactionhistorytbodyitem {
+  border: 1px solid black;
+}
