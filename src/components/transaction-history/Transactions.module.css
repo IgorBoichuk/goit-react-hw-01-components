@@ -1,18 +1,18 @@
-.transactionhistorytable {
+.table {
   width: 500px;
   background-color: rgb(228, 228, 228);
   margin: 50px auto;
 }
 
-.transactionhistorytitle {
+.title {
   background-color: rgb(65, 107, 224);
   padding: 10px;
 }
 
-.transactionhistorytbodylist:nth-child(even) {
+.tbodylist:nth-child(even) {
   background-color: rgb(140, 194, 194);
 }
-.transactionhistorytbodyitem {
+.tbodyitem {
   text-align: center;
   padding: 10px;
 }

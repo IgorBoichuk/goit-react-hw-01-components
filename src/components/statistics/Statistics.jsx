@@ -1,4 +1,5 @@
 import style from './Statistics.module.css';
+import PropTypes from 'prop-types';
 
 export const Statistics = ({ id, title, stats }) => {
   const allLabels = stats.map(item => {
@@ -16,4 +17,11 @@ export const Statistics = ({ id, title, stats }) => {
       <ul className={style.list}>{allLabels}</ul>
     </div>
   );
+};
+
+Statistics.propTypes = {
+  id: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  stats: PropTypes.object.isRequired,
+  percentage: PropTypes.number.isRequired,
 };

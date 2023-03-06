@@ -1,4 +1,5 @@
 import style from './FriendList.module.css';
+import PropTypes from 'prop-types';
 
 export const FriendList = ({ id, avatar, name, isOnline, friends }) => {
   const friendsList = friends.map(item => {
@@ -18,4 +19,12 @@ export const FriendList = ({ id, avatar, name, isOnline, friends }) => {
     );
   });
   return <ul className={style.friendList}>{friendsList}</ul>;
+};
+
+FriendList.propTypes = {
+  id: PropTypes.number.isRequired,
+  avatar: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  isOnline: PropTypes.number.isRequired,
+  friends: PropTypes.object.isRequired,
 };

@@ -5,8 +5,8 @@ import transactions from '../database/transactions';
 
 import { Profile } from './profile/Profile';
 import { Statistics } from './statistics/Statistics';
-import { FriendList } from './friends/FriendList';
-import { TransactionHistory } from './transactions/TransactionHistory';
+import { FriendList } from './frien-dList/FriendList';
+import { TransactionHistory } from './transaction-history/TransactionHistory';
 
 export const App = () => {
   return (

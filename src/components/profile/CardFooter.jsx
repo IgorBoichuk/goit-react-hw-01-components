@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 export const CardFooter = ({ followers, views, likes }) => {
   return (
@@ -17,6 +18,12 @@ export const CardFooter = ({ followers, views, likes }) => {
       </StatsItem>
     </ProfileCardFooter>
   );
+};
+
+CardFooter.propTypes = {
+  followers: PropTypes.number.isRequired,
+  views: PropTypes.number.isRequired,
+  likes: PropTypes.number.isRequired,
 };
 
 const ProfileCardFooter = styled.ul`

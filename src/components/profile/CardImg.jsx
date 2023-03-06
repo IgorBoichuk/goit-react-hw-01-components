@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 export const CardImage = ({ avatar }) => {
   return (
@@ -20,3 +21,7 @@ const Image = styled.img`
   margin-left: auto;
   margin-right: auto;
 `;
+
+CardImage.propTypes = {
+  avatar: PropTypes.string.isRequired,
+};
