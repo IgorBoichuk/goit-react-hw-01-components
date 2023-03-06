@@ -2,6 +2,8 @@ import style from './Statistics.module.css';
 import PropTypes from 'prop-types';
 
 export const Statistics = ({ id, title, stats }) => {
+  title = { title } ? <h2 className={style.title}>{title}</h2> : '';
+
   const allLabels = stats.map(item => {
     return (
       <li key={item.id} className={style.item}>
@@ -13,7 +15,7 @@ export const Statistics = ({ id, title, stats }) => {
 
   return (
     <div className={style.wrapper}>
-      <h2 className={style.title}>{title}</h2>
+      {title}
       <ul className={style.list}>{allLabels}</ul>
     </div>
   );

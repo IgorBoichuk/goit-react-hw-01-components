@@ -1,8 +1,8 @@
 import style from './FriendList.module.css';
 import PropTypes from 'prop-types';
 
-export const FriendList = ({ id, avatar, name, isOnline, friends }) => {
-  const friendsList = friends.map(item => {
+export const FriendItems = ({ id, avatar, name, isOnline, friends }) => {
+  const items = friends.map(item => {
     return (
       <li key={item.id} className={style.item}>
         <span
@@ -18,10 +18,10 @@ export const FriendList = ({ id, avatar, name, isOnline, friends }) => {
       </li>
     );
   });
-  return <ul className={style.friendList}>{friendsList}</ul>;
+  return items;
 };
 
-FriendList.propTypes = {
+FriendItems.propTypes = {
   id: PropTypes.number.isRequired,
   avatar: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
