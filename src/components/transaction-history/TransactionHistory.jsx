@@ -1,7 +1,7 @@
 import style from './Transactions.module.css';
 import PropTypes from 'prop-types';
 
-export const TransactionHistory = ({ id, type, amount, currency, items }) => {
+export const TransactionHistory = ({ items }) => {
   const renderedData = items.map(item => {
     return (
       <tr key={item.id} className={style.tbodylist}>
@@ -27,9 +27,5 @@ export const TransactionHistory = ({ id, type, amount, currency, items }) => {
 };
 
 TransactionHistory.propTypes = {
-  id: PropTypes.string.isRequired,
-  type: PropTypes.string.isRequired,
-  amount: PropTypes.number.isRequired,
-  currency: PropTypes.string.isRequired,
-  items: PropTypes.object.isRequired,
+  items: PropTypes.array.isRequired,
 };

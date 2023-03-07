@@ -1,7 +1,7 @@
 import style from './FriendList.module.css';
 import PropTypes from 'prop-types';
 
-export const FriendItems = ({ id, avatar, name, isOnline, friends }) => {
+export const FriendItem = ({ friends }) => {
   const items = friends.map(item => {
     return (
       <li key={item.id} className={style.item}>
@@ -21,10 +21,6 @@ export const FriendItems = ({ id, avatar, name, isOnline, friends }) => {
   return items;
 };
 
-FriendItems.propTypes = {
-  id: PropTypes.number.isRequired,
-  avatar: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-  isOnline: PropTypes.number.isRequired,
-  friends: PropTypes.object.isRequired,
+FriendItem.propTypes = {
+  friends: PropTypes.array.isRequired,
 };
